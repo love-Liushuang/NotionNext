@@ -1,7 +1,7 @@
 // 注: process.env.XX是Vercel的环境变量，配置方式见：https://docs.tangly1024.com/article/how-to-config-notion-next#c4768010ae7d44609b744e79e2f9959a
 const BLOG = {
   // Important page_id！！！Duplicate Template from
-  // https://lshor4444.notion.site/7af3a6f237f14435bc2e578f827eb1ff?v=e9106b1593a44c4eb7e3e1dec11f5d59&pvs=4
+  // https://abigbook-or4444.notion.site/7af3a6f237f14435bc2e578f827eb1ff?v=e9106b1593a44c4eb7e3e1dec11f5d59&pvs=4
   NOTION_PAGE_ID:
         process.env.NOTION_PAGE_ID || '7af3a6f237f14435bc2e578f827eb1ff',
   PSEUDO_STATIC: process.env.NEXT_PUBLIC_PSEUDO_STATIC || false, // 伪静态路径，开启后所有文章URL都以 .html 结尾。
@@ -18,7 +18,7 @@ const BLOG = {
 
   CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // 支持Menu 类型，从3.12.0版本起，各主题将逐步支持灵活的二级菜单配置，替代了原来的Page类型，此配置是试验功能、默认关闭。
 
-  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'b-ABIGBOOK', // 您的昵称 例如 tangly1024
+  AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'ABIGBOOK', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || '一个普通的干饭人🍚', // 作者简介
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://131417.net', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'ABIGBOOK, 博客', // 网站关键词 英文逗号隔开
@@ -34,7 +34,7 @@ const BLOG = {
   CONTACT_BILIBILI: process.env.NEXT_PUBLIC_CONTACT_BILIBILI || '', // B站主页
   CONTACT_YOUTUBE: process.env.NEXT_PUBLIC_CONTACT_YOUTUBE || '', // Youtube主页
 
-  NOTION_HOST: process.env.NEXT_PUBLIC_NOTION_HOST || 'https://lshor4444.notion.site', // Notion域名，您可以选择用自己的域名进行反向代理，如果不懂得什么是反向代理，请勿修改此项
+  NOTION_HOST: process.env.NEXT_PUBLIC_NOTION_HOST || 'https://abigbook-or4444.notion.site', // Notion域名，您可以选择用自己的域名进行反向代理，如果不懂得什么是反向代理，请勿修改此项
 
   BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || '/favicon.ico', // blog favicon 配置, 默认使用 /public/favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
 
@@ -381,7 +381,7 @@ const BLOG = {
 
   // 作废配置
   AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'NotionNext BLOG', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'ABIGBOOK', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
   HOME_BANNER_IMAGE:
         process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE || '/bg_image.jpg', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件
   DESCRIPTION:
