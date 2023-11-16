@@ -9,11 +9,11 @@ const BlogCard = ({ index, post, showSummary, siteInfo }) => {
 
   const showPreview = siteConfig('FUKASAWA_POST_LIST_PREVIEW', null, CONFIG) && post.blockMap
   // fukasawa 强制显示图片
-  if (siteConfig('FUKASAWA_POST_LIST_COVER_FORCE', null, CONFIG) && post && !post.pageCover) {
-    console.log('!!!!!!!!!');
+  //   if (siteConfig('FUKASAWA_POST_LIST_COVER_FORCE', null, CONFIG) && post && !post.pageCover) {
+  //     console.log('!!!!!!!!!');
 
-    post.pageCoverThumbnail = siteInfo?.pageCover
-  }
+  //     post.pageCoverThumbnail = siteInfo?.pageCover
+  //   }
   const showPageCover = siteConfig('FUKASAWA_POST_LIST_COVER', null, CONFIG) && (post?.image || post?.pageCoverThumbnail)
 
   return (

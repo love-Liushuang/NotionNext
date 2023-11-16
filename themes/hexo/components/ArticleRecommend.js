@@ -30,8 +30,8 @@ export default function ArticleRecommend({ recommendPosts, siteInfo }) {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {recommendPosts.map(post => {
-                  const headerImage = post?.pageCoverThumbnail
-                    ? post.pageCoverThumbnail
+                  const headerImage = (post?.image || post?.pageCoverThumbnail)
+                    ? (post?.image || post.pageCoverThumbnail)
                     : siteInfo?.pageCover
 
                   return (

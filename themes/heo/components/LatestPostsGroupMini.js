@@ -30,7 +30,7 @@ export default function LatestPostsGroupMini ({ latestPosts, siteInfo }) {
         {latestPosts.map(post => {
           const selected = currentPath === `${siteConfig('SUB_PATH', '')}/${post.slug}`
 
-          const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCover
+          const headerImage = (post?.image || post?.pageCoverThumbnail) ? (post?.image || post.pageCoverThumbnail) : siteInfo?.pageCover
 
           return (
             (<Link

@@ -5,7 +5,7 @@ import TwikooCommentCount from '@/components/TwikooCommentCount'
 import LazyImage from '@/components/LazyImage'
 
 const BlogPostCard = ({ post }) => {
-  const showPageCover = siteConfig('EXAMPLE_POST_LIST_COVER', null, CONFIG) && post?.pageCoverThumbnail
+  const showPageCover = siteConfig('EXAMPLE_POST_LIST_COVER', null, CONFIG) && (post?.image || post?.pageCoverThumbnail)
 
   return <article className={`${showPageCover ? 'flex md:flex-row flex-col-reverse' : ''} replace mb-12 `}>
         <div className={`${showPageCover ? 'md:w-7/12' : ''}`}>
@@ -42,7 +42,7 @@ const BlogPostCard = ({ post }) => {
         {showPageCover && (
             <div className="md:w-5/12 w-full h-44 overflow-hidden p-1">
                 <Link href={`${siteConfig('SUB_PATH', '')}/${post.slug}`} passHref legacyBehavior>
-                    <LazyImage src={post?.pageCoverThumbnail} className='w-full bg-cover hover:scale-110 duration-200' />
+                  <LazyImage src={post?.image || post?.pageCoverThumbnail} className='w-full bg-cover hover:scale-110 duration-200' />
                 </Link>
             </div>
         )}

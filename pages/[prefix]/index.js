@@ -71,7 +71,7 @@ const Slug = props => {
     description: post?.summary,
     type: post?.type,
     slug: post?.slug,
-    image: post?.pageCoverThumbnail || (siteInfo?.pageCover || BLOG.HOME_BANNER_IMAGE),
+    image: post?.image || post?.pageCoverThumbnail || (siteInfo?.pageCover || BLOG.HOME_BANNER_IMAGE),
     category: post?.category?.[0],
     tags: post?.tags
   }

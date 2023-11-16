@@ -114,12 +114,12 @@ const BlogPostCard = ({ post, showSummary }) => {
           </div>
         </div>
 
-        {siteConfig('NEXT_POST_LIST_COVER', null, CONFIG) && post?.pageCoverThumbnail && (
+              {siteConfig('NEXT_POST_LIST_COVER', null, CONFIG) && (post?.image || post?.pageCoverThumbnail) && (
           <Link href={`${siteConfig('SUB_PATH', '')}/${post.slug}`} passHref legacyBehavior>
             <div className="h-72 w-full relative duration-200 cursor-pointer transform overflow-hidden">
               <Image
                 className="hover:scale-105 transform duration-500"
-                src={post?.pageCoverThumbnail}
+                src={post?.image || post?.pageCoverThumbnail}
                 alt={post.title}
                 layout="fill"
                 objectFit="cover"
@@ -127,7 +127,7 @@ const BlogPostCard = ({ post, showSummary }) => {
               />
             </div>
           </Link>
-        )}
+              )}
       </div>
     </Card>
   )

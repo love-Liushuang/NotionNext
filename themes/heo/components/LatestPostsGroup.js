@@ -17,7 +17,7 @@ const LatestPostsGroup = ({ latestPosts, siteInfo }) => {
 
   return <div className='grid grid-cols-2 gap-4'>
         {latestPosts.map(post => {
-          const headerImage = post?.pageCoverThumbnail ? post.pageCoverThumbnail : siteInfo?.pageCover
+          const headerImage = (post?.image || post?.pageCoverThumbnail) ? (post?.image || post.pageCoverThumbnail) : siteInfo?.pageCover
 
           return (
             (<Link key={post.id} passHref

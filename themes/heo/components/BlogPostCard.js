@@ -6,10 +6,10 @@ import { siteConfig } from '@/lib/config'
 
 const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
   const showPreview = siteConfig('HEO_POST_LIST_PREVIEW', null, CONFIG) && post.blockMap
-  if (post && !post.pageCoverThumbnail && siteConfig('HEO_POST_LIST_COVER_DEFAULT', null, CONFIG)) {
+  if (post && !post?.image && !post.pageCoverThumbnail && siteConfig('HEO_POST_LIST_COVER_DEFAULT', null, CONFIG)) {
     post.pageCoverThumbnail = siteInfo?.pageCover
   }
-  const showPageCover = siteConfig('HEO_POST_LIST_COVER', null, CONFIG) && post?.pageCoverThumbnail && !showPreview
+  const showPageCover = siteConfig('HEO_POST_LIST_COVER', null, CONFIG) && (post?.image || post?.pageCoverThumbnail) && !showPreview
   return (
         <div className={` ${siteConfig('HEO_POST_LIST_COVER_HOVER_ENLARGE', null, CONFIG) ? ' hover:scale-110 transition-all duration-150' : ''}`} >
 
@@ -24,7 +24,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                 {showPageCover && (
                     <Link href={`${siteConfig('SUB_PATH', '')}/${post.slug}`} passHref legacyBehavior>
                         <div className="w-full md:w-5/12 2xl:w-full overflow-hidden">
-                            <LazyImage priority={index === 0} src={post?.pageCoverThumbnail} alt={post?.title} className='h-60 w-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300' />
+                          <LazyImage priority={index === 0} src={post?.image || post?.pageCoverThumbnail} alt={post?.title} className='h-60 w-full object-cover group-hover:scale-105 group-hover:brightness-75 transition-all duration-300' />
                         </div>
                     </Link>
                 )}

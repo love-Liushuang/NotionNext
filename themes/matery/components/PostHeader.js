@@ -4,7 +4,7 @@ import LazyImage from '@/components/LazyImage'
  * 文章背景图
  */
 export default function PostHeader({ post, siteInfo }) {
-  const headerImage = post?.pageCoverThumbnail ? post?.pageCoverThumbnail : siteInfo?.pageCover
+  const headerImage = (post?.image || post?.pageCoverThumbnail) ? (post?.image || post?.pageCoverThumbnail) : siteInfo?.pageCover
   const title = post?.title
   return (
         <div id='header' className="flex h-96 justify-center align-middle items-center w-full relative bg-black">

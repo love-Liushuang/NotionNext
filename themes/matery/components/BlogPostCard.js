@@ -10,10 +10,10 @@ import { formatDateFmt } from '@/lib/formatDate'
 const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
   const showPreview = siteConfig('MATERY_POST_LIST_PREVIEW', null, CONFIG) && post.blockMap
   // matery 主题默认强制显示图片
-  if (post && !post.pageCoverThumbnail) {
+  if (post && !post?.image && !post.pageCoverThumbnail) {
     post.pageCoverThumbnail = siteInfo?.pageCover
   }
-  const showPageCover = siteConfig('MATERY_POST_LIST_COVER', null, CONFIG) && post?.pageCoverThumbnail
+  const showPageCover = siteConfig('MATERY_POST_LIST_COVER', null, CONFIG) && (post?.image || post?.pageCoverThumbnail)
   const delay = (index % 3) * 300
   return (
         <div
@@ -32,7 +32,7 @@ const BlogPostCard = ({ index, post, showSummary, siteInfo }) => {
                     <Link href={`${siteConfig('SUB_PATH', '')}/${post.slug}`} passHref legacyBehavior>
                         <div className="flex flex-grow w-full relative duration-200 = rounded-t-md cursor-pointer transform overflow-hidden">
                             <LazyImage
-                                src={post?.pageCoverThumbnail}
+                              src={post?.image || post?.pageCoverThumbnail}
                                 alt={post.title}
                                 className="h-full w-full group-hover:scale-125 group-hover:brightness-50 brightness-90 rounded-t-md transform object-cover duration-500"
                             />
