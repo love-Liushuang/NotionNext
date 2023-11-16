@@ -14,7 +14,7 @@ const BlogCard = ({ index, post, showSummary, siteInfo }) => {
 
     post.pageCoverThumbnail = siteInfo?.pageCover
   }
-  const showPageCover = siteConfig('FUKASAWA_POST_LIST_COVER', null, CONFIG) && post?.pageCoverThumbnail
+  const showPageCover = siteConfig('FUKASAWA_POST_LIST_COVER', null, CONFIG) && (post?.image || post?.pageCoverThumbnail)
 
   return (
         <div
