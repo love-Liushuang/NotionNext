@@ -65,13 +65,14 @@ const Slug = props => {
       }
     }
   }, [post])
+  console.log('这是哪----', post);
 
   const meta = {
     title: post ? `${post?.title} | ${siteConfig('TITLE')}` : `${siteConfig('TITLE')} | loading`,
     description: post?.summary,
     type: post?.type,
     slug: post?.slug,
-    image: post?.pageCoverThumbnail || (siteInfo?.pageCover || BLOG.HOME_BANNER_IMAGE),
+    image: post?.image || post?.pageCoverThumbnail || (siteInfo?.pageCover || BLOG.HOME_BANNER_IMAGE),
     category: post?.category?.[0],
     tags: post?.tags
   }
