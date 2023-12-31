@@ -119,10 +119,6 @@ const LayoutBase = (props) => {
             */
 const LayoutIndex = (props) => {
   console.log('这。。。。', props);
-    props.posts.forEach(val => {
-        val.pageCoverThumbnail = val.image
-    });
-    console.log('这。。。。11', props);
   return <LayoutPostList {...props} />
 }
 
