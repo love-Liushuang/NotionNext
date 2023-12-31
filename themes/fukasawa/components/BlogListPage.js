@@ -47,7 +47,7 @@ const BlogListPage = ({ page = 1, posts = [], postCount, siteInfo }) => {
     setFilterPosts(newFilterPosts)
   }, [columns, posts])
   console.log('这又是在哪---', posts, siteInfo);
-    props.posts.forEach(val => {
+    posts.forEach(val => {
         val.pageCoverThumbnail = val.image
     });
   if (!filterPosts || filterPosts.length === 0) {
