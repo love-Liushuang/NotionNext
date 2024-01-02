@@ -2,7 +2,7 @@ import Logo from './Logo'
 import GroupCategory from './GroupCategory'
 import { MenuList } from './MenuList'
 import GroupTag from './GroupTag'
-import SearchInput from './SearchInput'
+// import SearchInput from './SearchInput'
 import SiteInfo from './SiteInfo'
 import Catalog from './Catalog'
 import Announcement from './Announcement'
@@ -72,10 +72,10 @@ function AsideLeft(props) {
                 <MenuList {...props} />
             </section>
 
-            <section className='flex flex-col text-gray-600'>
+            {/* <section className='flex flex-col text-gray-600'>
                 <div className='w-12 my-4' />
                 <SearchInput {...props} />
-            </section>
+            </section> */}
 
             <section className='flex flex-col dark:text-gray-300'>
                 <div className='w-12 my-4' />
