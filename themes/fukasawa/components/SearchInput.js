@@ -57,7 +57,7 @@ const SearchInput = (props) => {
   const getIsShowSearchInput = cookie.load('isShowSearchInput')
   console.log('getIsShowSearchInput', getIsShowSearchInput);
     
-  if (getIsShowSearchInput) {
+  if (getIsShowSearchInput === 'true') {
     
   return <div className='flex w-full bg-gray-100'>
     <input
