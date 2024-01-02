@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import Collapse from '@/components/Collapse'
 import { MenuList } from './MenuList'
 import Logo from './Logo'
-// import SearchInput from './SearchInput'
+import SearchInput from './SearchInput'
 
 /**
  * 顶部导航
@@ -24,7 +24,7 @@ const TopNav = props => {
       <Collapse type='vertical' isOpen={isOpen} collapseRef={collapseRef}>
         <div className='py-1 px-5'>
           <MenuList {...props} onHeightChange={(param) => collapseRef.current?.updateCollapseHeight(param)} />
-          {/* <SearchInput {...props} /> */}
+          <SearchInput {...props} />
         </div>
       </Collapse>
       <div className='w-full flex justify-between items-center p-4 '>
