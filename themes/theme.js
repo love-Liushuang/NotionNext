@@ -151,6 +151,8 @@ export const loadIsShowSearchInputCookies = () => {
    * @param isShow
    */
 export const saveIsShowSearchInputToCookies = (isShow) => {
+    console.log('saveIsShowSearchInputToCookies----isShow', isShow);
+    
     cookie.save('isShowSearchInput', isShow, { path: '/' })
 }
 
