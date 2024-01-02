@@ -1,7 +1,7 @@
 import { useGlobal } from '@/lib/global'
 import { useRouter } from 'next/router'
 import { useImperativeHandle, useRef, useState } from 'react'
-import { loadIsShowSearchInputCookies } from '@/themes/theme'
+import cookie from 'react-cookies'
 
 const SearchInput = (props) => {
   const { keyword, cRef } = props
@@ -54,7 +54,7 @@ const SearchInput = (props) => {
   }
 
   // 读取 isShowSearchInput
-  const getIsShowSearchInput = loadIsShowSearchInputCookies()
+    const getIsShowSearchInput = cookie.load('isShowSearchInput')
     console.log('getIsShowSearchInput', getIsShowSearchInput);
     
   if (getIsShowSearchInput) {
