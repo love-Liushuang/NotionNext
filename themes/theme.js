@@ -138,6 +138,21 @@ export const loadDarkModeFromCookies = () => {
 export const saveDarkModeToCookies = (newTheme) => {
   cookie.save('darkMode', newTheme, { path: '/' })
 }
+/**
+ * 读取是否展示搜索框
+ * @returns {*}
+ */
+export const loadIsShowSearchInputCookies = () => {
+    return cookie.load('isShowSearchInput')
+}
+
+/**
+   * 保存是否展示搜索框
+   * @param isShow
+   */
+export const saveIsShowSearchInputToCookies = (isShow) => {
+    cookie.save('isShowSearchInput', isShow, { path: '/' })
+}
 
 /**
  * 读取默认主题

@@ -1,6 +1,7 @@
 import { useGlobal } from '@/lib/global'
 import { useRouter } from 'next/router'
 import { useImperativeHandle, useRef, useState } from 'react'
+import { loadIsShowSearchInputCookies } from '@/themes/theme'
 
 const SearchInput = (props) => {
   const { keyword, cRef } = props
@@ -52,6 +53,12 @@ const SearchInput = (props) => {
     searchInputRef.current.value = ''
   }
 
+  // 读取 isShowSearchInput
+  const getIsShowSearchInput = loadIsShowSearchInputCookies()
+    console.log('getIsShowSearchInput', getIsShowSearchInput);
+    
+  if (getIsShowSearchInput) {
+    
   return <div className='flex w-full bg-gray-100'>
     <input
       ref={searchInputRef}
@@ -74,6 +81,10 @@ const SearchInput = (props) => {
       </div>
       )}
   </div>
+
+  } else {
+    return <div className='flex w-full bg-gray-100'></div>
+  }
 }
 
 export default SearchInput
