@@ -701,6 +701,7 @@ svg.notion-page-icon {
 }
 
 .notion-asset-wrapper-image > div {
+    width: 100% !important;
     height: auto !important;
 }
 
