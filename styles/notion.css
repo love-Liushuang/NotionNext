@@ -701,7 +701,6 @@ svg.notion-page-icon {
 }
 
 .notion-asset-wrapper-image > div {
-    width: 100% !important;
     height: auto !important;
 }
 
@@ -2061,5 +2060,6 @@ code.language-mermaid {
 
 /* 竖屏视频高度bug */
 figure.notion-asset-wrapper.notion-asset-wrapper-video>div {
+    width: 100% !important;
     height: 100% !important;
 }
