@@ -92,7 +92,7 @@ const getSEOMeta = (props, router, global) => {
   switch (router.route) {
     case '/':
       return {
-        title: `${siteConfig('TITLE')} | ${siteConfig('DESCRIPTION')}`,
+        title: `${siteConfig('TITLE')}`,
         description: siteConfig('DESCRIPTION'),
         image: siteConfig('HOME_BANNER_IMAGE'),
         slug: '',
