@@ -40,7 +40,7 @@ export default function ArticleDetail(props) {
             <NotionIcon icon={post?.pageIcon} />{post.title}
           </div>
 
-          <section className="flex-wrap flex mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
+          {/* <section className="flex-wrap flex mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
             <div>
               {post?.category && (<>
                   <Link
@@ -81,7 +81,7 @@ export default function ArticleDetail(props) {
             </div>
             </div>
 
-          </section>
+          </section> */}
 
           <WWAds className='w-full' orientation='horizontal'/>
         </header>
