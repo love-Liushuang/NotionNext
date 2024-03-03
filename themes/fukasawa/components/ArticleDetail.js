@@ -40,9 +40,9 @@ export default function ArticleDetail(props) {
             <NotionIcon icon={post?.pageIcon} />{post.title}
           </div>
 
-          {/* <section className="flex-wrap flex mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
+          <section className="flex-wrap flex mt-2 text-gray-400 dark:text-gray-400 font-light leading-8">
             <div>
-              {post?.category && (<>
+              {/* {post?.category && (<>
                   <Link
                     href={`/category/${post.category}`}
                     passHref
@@ -53,10 +53,10 @@ export default function ArticleDetail(props) {
 
                   </Link>
                 <span className='mr-2'>|</span>
-              </>)}
+              </>)} */}
 
               {post?.type !== 'Page' && (<>
-                <Link
+                {/* <Link
                   href={`/archive#${formatDateFmt(post?.publishDate, 'yyyy-MM')}`}
                   passHref
                   className="pl-1 mr-2 cursor-pointer hover:text-gray-700 dark:hover:text-gray-200 border-b dark:border-gray-500 border-dashed">
@@ -64,13 +64,13 @@ export default function ArticleDetail(props) {
                   {post?.publishDay}
 
                 </Link>
-                <span className='mr-2'>|</span>
+                <span className='mr-2'>|</span> */}
                 <span className='mx-2 text-gray-400 dark:text-gray-500'>
                   {locale.COMMON.LAST_EDITED_TIME}: {post.lastEditedDay}
                 </span>
               </>)}
 
-            <div className='my-2'>
+            {/* <div className='my-2'>
                 {post.tagItems && (
                     <div className="flex flex-nowrap overflow-x-auto">
                         {post.tagItems.map(tag => (
@@ -78,10 +78,10 @@ export default function ArticleDetail(props) {
                         ))}
                     </div>
                 )}
-            </div>
+            </div> */}
             </div>
 
-          </section> */}
+          </section>
 
           <WWAds className='w-full' orientation='horizontal'/>
         </header>
