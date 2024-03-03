@@ -31,7 +31,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   const route = useRouter()
   const queryParam = useMemo(() => {
-    return getQueryParam(route.asPath, 'theme') || pageProps?.NOTION_CONFIG?.THEME || BLOG.THEME
+    return pageProps?.NOTION_CONFIG?.THEME || BLOG.THEME || getQueryParam(route.asPath, 'theme')
   }, [route])
 
   // 整体布局

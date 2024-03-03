@@ -28,6 +28,9 @@ export const getGlobalLayoutByTheme = (themeQuery) => {
  */
 export const getLayoutByTheme = ({ router, theme }) => {
   const themeQuery = getQueryParam(router.asPath, 'theme') || theme
+  console.log('themeQuery<<<<<<<<<<<<<', themeQuery, router.pathname, router.asPath);
+  console.log('BLOG.THEME', BLOG.THEME);
+    
 //   if (themeQuery !== BLOG.THEME) {
 //     return dynamic(() => import(`@/themes/${themeQuery}`).then(m => {
 //       setTimeout(() => {
