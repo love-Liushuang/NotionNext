@@ -113,15 +113,15 @@ function AsideLeft(props) {
                 <AdSlot type='in-article' />
             </section>
 
-            {router.asPath !== '/tag' && <section className='flex flex-col'>
+            {/* {router.asPath !== '/tag' && <section className='flex flex-col'>
                 <div className='w-12 my-4' />
                 <GroupTag tags={tagOptions} currentTag={currentTag} />
-            </section>}
+            </section>} */}
 
-            {router.asPath !== '/category' && <section className='flex flex-col'>
+            {/* {router.asPath !== '/category' && <section className='flex flex-col'>
                 <div className='w-12 my-4' />
                 <GroupCategory categories={categoryOptions} currentCategory={currentCategory} />
-            </section>}
+            </section>} */}
 
             <section className='flex flex-col'>
                 <div className='w-12 my-4' />
@@ -133,12 +133,12 @@ function AsideLeft(props) {
                 <DarkModeButton />
             </section>
 
-            <section className='sticky top-0 pt-12'>
+            {/* <section className='sticky top-0 pt-12'>
                 <Catalog toc={post?.toc} />
                 <div className='flex justify-center'>
                     <div>{slot}</div>
                 </div>
-            </section>
+            </section> */}
 
         </div>
     </div>

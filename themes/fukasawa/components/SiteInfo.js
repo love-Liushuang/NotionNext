@@ -10,14 +10,14 @@ function SiteInfo ({ title }) {
         <footer
             className='relative leading-6 justify-start w-full text-gray-600 dark:text-gray-300 text-xs '
         >
-            <span> © {`${copyrightDate}`} <span> <a href={siteConfig('LINK')}> <i className='mx-1 animate-pulse fas fa-heart'/> {siteConfig('AUTHOR')}</a>. <br /></span>
+            <span> © {`${copyrightDate}`} <span> <a href={siteConfig('LINK')}> <i className='mx-1 animate-pulse fas fa-heart'/> {siteConfig('AUTHOR')}</a><br /></span>
 
             {siteConfig('BEI_AN') && <><i className='fas fa-shield-alt' /> <a href='https://beian.miit.gov.cn/' className='mr-2'>{siteConfig('BEI_AN')}</a><br/></>}
 
             <span className='hidden busuanzi_container_site_pv'> <i className='fas fa-eye' /><span className='px-1 busuanzi_value_site_pv'> </span>  </span>
             <span className='pl-2 hidden busuanzi_container_site_uv'> <i className='fas fa-users' /> <span className='px-1 busuanzi_value_site_uv'> </span> </span>
             <br />
-            <span className='text-xs font-serif'> Powered by <a href='https://131417.net' className='underline'>131417.net</a></span><br /></span>
+            <span className='text-xs font-serif'> Powered by <a href='https://1314news.net' className='underline'>1314news.net</a></span><br /></span>
             <h1>{title}</h1>
         </footer>
   )

@@ -28,20 +28,20 @@ export const getGlobalLayoutByTheme = (themeQuery) => {
  */
 export const getLayoutByTheme = ({ router, theme }) => {
   const themeQuery = getQueryParam(router.asPath, 'theme') || theme
-  if (themeQuery !== BLOG.THEME) {
-    return dynamic(() => import(`@/themes/${themeQuery}`).then(m => {
-      setTimeout(() => {
-        checkThemeDOM()
-      }, 500);
+//   if (themeQuery !== BLOG.THEME) {
+//     return dynamic(() => import(`@/themes/${themeQuery}`).then(m => {
+//       setTimeout(() => {
+//         checkThemeDOM()
+//       }, 500);
 
-      const components = m[getLayoutNameByPath(router.pathname, router.asPath)]
-      if (components) {
-        return components
-      } else {
-        return m.LayoutSlug
-      }
-    }), { ssr: true })
-  } else {
+//       const components = m[getLayoutNameByPath(router.pathname, router.asPath)]
+//       if (components) {
+//         return components
+//       } else {
+//         return m.LayoutSlug
+//       }
+//     }), { ssr: true })
+//   } else {
     setTimeout(() => {
       checkThemeDOM()
     }, 100);
@@ -51,7 +51,7 @@ export const getLayoutByTheme = ({ router, theme }) => {
     } else {
       return ThemeComponents.LayoutSlug
     }
-  }
+//   }
 }
 
 /**
