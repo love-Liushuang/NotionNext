@@ -11,7 +11,7 @@ export default async function handler(req, res) {
     try {
       const response = await subscribeToMailchimpApi({ email, first_name: firstName, last_name: lastName })
       const data = await response.json()
-      // console.log('data', data)
+      console.log('data', data)
       res.status(200).json({ status: 'success', message: 'Subscription successful!' })
     } catch (error) {
       res.status(400).json({ status: 'error', message: 'Subscription failed!', error })
