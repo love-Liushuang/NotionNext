@@ -55,7 +55,7 @@ const SearchInput = (props) => {
 
   // 读取 isShowSearchInput
   const getIsShowSearchInput = cookie.load('isShowSearchInput')
-  console.log('getIsShowSearchInput', getIsShowSearchInput);
+  // console.log('getIsShowSearchInput', getIsShowSearchInput);
     
   if (getIsShowSearchInput === 'true') {
     

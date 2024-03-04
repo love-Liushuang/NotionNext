@@ -12,12 +12,12 @@ import NotionIcon from '@/components/NotionIcon'
  * @returns
  */
 const BlogCard = ({ index, post, showSummary, siteInfo }) => {
-  console.log('BlogCard------index, post, showSummary, siteInfo', index, post, showSummary, siteInfo);
+  // console.log('BlogCard------index, post, showSummary, siteInfo', index, post, showSummary, siteInfo);
 
   const showPreview = siteConfig('FUKASAWA_POST_LIST_PREVIEW', null, CONFIG) && post.blockMap
   // fukasawa 强制显示图片
   if (siteConfig('FUKASAWA_POST_LIST_COVER_FORCE', null, CONFIG) && post && !post.pageCover) {
-    console.log('!!!!!!!!!');
+    // console.log('!!!!!!!!!');
 
     post.pageCoverThumbnail = siteInfo?.pageCover
   }

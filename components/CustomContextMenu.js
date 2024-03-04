@@ -82,7 +82,7 @@ export default function CustomContextMenu(props) {
     const url = window.location.href
     navigator.clipboard.writeText(url)
       .then(() => {
-        console.log('页面地址已复制')
+        // console.log('页面地址已复制')
       })
       .catch((error) => {
         console.error('复制页面地址失败:', error)

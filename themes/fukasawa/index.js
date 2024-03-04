@@ -98,7 +98,7 @@ const LayoutBase = (props) => {
             * @returns 首页就是一个博客列表
             */
 const LayoutIndex = (props) => {
-  console.log('这。。。。', props);
+  // console.log('这。。。。', props);
   return <LayoutPostList {...props} />
 }
 

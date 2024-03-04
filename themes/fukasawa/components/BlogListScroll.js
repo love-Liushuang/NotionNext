@@ -51,7 +51,7 @@ const BlogListScroll = props => {
     }
   }, [])
 
-  console.log('这ci又是在哪---', posts, siteInfo);
+  // console.log('这ci又是在哪---', posts, siteInfo);
 
   if (!posts || posts.length === 0) {
     return <BlogPostListEmpty />

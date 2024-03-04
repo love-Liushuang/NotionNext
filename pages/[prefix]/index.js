@@ -50,7 +50,7 @@ const Slug = props => {
       }
     }
   }, [post])
-  console.log('这是哪----', post);
+  // console.log('这是哪----', post);
 
   props = { ...props, lock, setLock, validPassword }
   // 根据页面路径加载不同Layout文件
