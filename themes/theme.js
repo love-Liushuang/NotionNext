@@ -55,7 +55,7 @@ export const getLayoutByTheme = ({ router, theme }) => {
     } else {
       return ThemeComponents.LayoutSlug
     }
-//   }
+  }
 }
 
 /**
