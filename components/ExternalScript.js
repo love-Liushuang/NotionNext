@@ -7,7 +7,7 @@ import { isBrowser } from '@/lib/utils'
  * 传入参数将转为 <script>标签。
  * @returns
  */
-const ExternalScript = (props) => {
+const ExternalScript = props => {
   const { src } = props
   if (!isBrowser || !src) {
     return null
